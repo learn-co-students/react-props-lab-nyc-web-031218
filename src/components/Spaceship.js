@@ -1,1 +1,24 @@
+import React from 'react';
+
+
 // Code The Spaceship Component Here
+export default class Spaceship extends React.Component {
+  render(){
+    
+    return (
+      <div>
+      <h2>{this.props.name}</h2>
+      <p>{this.props.speed}</p>
+      <p>{this.props.hasRockets}</p>
+      <p>{this.props.colors}</p>
+      </div>
+    )
+  }
+}
+
+Spaceship.defaultProps = {
+     name: '',
+     speed: 'slow',
+     hasRockets: false,
+     colors: ['black', 'red']
+};
